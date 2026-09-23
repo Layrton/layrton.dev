@@ -1,0 +1,22 @@
+{
+  "name": "layrton.dev",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "assets": "node scripts/assets.mjs",
+    "dev": "npm run build && wrangler dev",
+    "test": "node --test",
+    "lint": "html-validate \"dist/**/*.html\"",
+    "lighthouse": "npx -y @lhci/cli@0.15.1 autorun",
+    "check": "npm run build && npm test && npm run lint",
+    "deploy": "npm run check && wrangler deploy"
+  },
+  "devDependencies": {
+    "html-validate": "^11.16.0",
+    "wrangler": "^4.137.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "doctype-style": ["error", { "style": "uppercase" }],
+    "no-redundant-role": "off",
+    "long-title": ["error", { "maxlength": 70 }]
+  }
+}

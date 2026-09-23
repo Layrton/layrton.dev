@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#fafafa, #18181b);
+  --fg: light-dark(#18181b, #e4e4e7);
+  --muted: light-dark(#52525b, #a1a1aa);
+  --accent: light-dark(#1d4ed8, #93c5fd);
+  --line: light-dark(#d4d4d8, #3f3f46);
+  font: 1rem/1.6 ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  padding: 1rem;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+main {
+  place-self: center;
+  width: 100%;
+  max-width: 42rem;
+  text-align: center;
+  padding-block: 2rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.5rem + 3vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 2.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+.role {
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.bio {
+  margin-top: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li + li {
+  margin-top: 0.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #333;
+    --accent: #000;
+  }
+}
