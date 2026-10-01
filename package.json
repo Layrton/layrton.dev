@@ -16,7 +16,7 @@
     "deploy": "npm run check && wrangler deploy"
   },
   "devDependencies": {
-    "html-validate": "^11.16.0",
-    "wrangler": "^4.137.0"
+    "html-validate": "^11.16.1",
+    "wrangler": "^4.143.0"
   }
 }
